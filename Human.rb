@@ -6,7 +6,7 @@ end
 
 
 
-class Student
+class Student <Human
 	attr_accessor :occupation
 	def initialize(occupation)
 
