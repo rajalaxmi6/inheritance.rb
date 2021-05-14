@@ -35,7 +35,7 @@ class Teacher < Human
 	def to_s
 		"#{self.class}  @Teacher #{Teacher}"
 	end
-
+end
 	class Employee <Human
 		def occupation()
 			puts "I am #{Employee}"
@@ -43,6 +43,7 @@ class Teacher < Human
 		 def to_s
 		 	"#{self.class} @Employee #{Employee}" 
 		 end
+	end
 
 		student =Student.new()
 		student.occupation("Jill","Student")
