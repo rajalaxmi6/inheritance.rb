@@ -1,24 +1,52 @@
 class Human
-	attr_accessor :occupation 
+	
 	def initialize(occupation)
 		@occupation = occupation
-end
+	end
 
+	def occupation()
+		puts "I am #{occupation}"
+end
 
 
 class Student <Human
-	attr_accessor :occupation
-	def initialize(occupation)
+	def occupation ()
+		super(Human)
+		puts "I am a #{Student}"
 
-		super(occupation)
-		puts "I am Student"
-		
+	end
 
 	def to_s
-		"#{self.class} @occupation : #{@occupation}"
-	end
+		"#{self.class} @Student #{Student}"
+end
 end
 
 
-occupation = occupation.new
-puts "I am Student" 
+student =Student.new()
+student.occupation("Jill","Student")
+
+
+class Teacher < Human
+	def occupation()
+		super(Human)
+		puts "I am #{Teacher}"
+	end
+
+	def to_s
+		"#{self.class}  @Teacher #{Teacher}"
+	end
+
+	class Employee <Human
+		def occupation()
+			puts "I am #{Employee}"
+		end
+		 def to_s
+		 	"#{self.class} @Employee #{Employee}" 
+		 end
+
+		student =Student.new()
+		student.occupation("Jill","Student")
+		teacher =Teacher.new()
+		teacher.occupation("Sam","Teacher")
+		employee = Employee.new()
+		employee.occupation("Bob","Employee")
