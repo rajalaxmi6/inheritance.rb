@@ -22,11 +22,6 @@ class Student <Human
 end
 end
 
-
-student =Student.new()
-student.occupation("Jill","Student")
-
-
 class Teacher < Human
 	def occupation()
 		super(Human)
