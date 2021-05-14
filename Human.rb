@@ -7,6 +7,7 @@ class Human
 	def occupation()
 		puts "I am #{occupation}"
 end
+end
 
 
 class Student <Human
