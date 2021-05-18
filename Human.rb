@@ -5,26 +5,29 @@ class Human
 	end
 
 	def occupation()
-		puts "I am #{occupation}"
-end
+		puts "I am #{Human}"
 end
 
+end
 
 class Student <Human
-	def occupation ()
-		super(Human)
+
 		puts "I am a #{Student}"
 
 	end
 
+
+
 	def to_s
 		"#{self.class} @Student #{Student}"
 end
-end
+
+
+
 
 class Teacher < Human
 	def occupation()
-		super(Human)
+		super()
 		puts "I am #{Teacher}"
 	end
 
@@ -32,18 +35,22 @@ class Teacher < Human
 		"#{self.class}  @Teacher #{Teacher}"
 	end
 end
+
 	class Employee <Human
 		def occupation()
-			puts "I am #{Employee}"
+			super()
+			puts "I am  an #{Employee}"
 		end
+
 		 def to_s
 		 	"#{self.class} @Employee #{Employee}" 
 		 end
-	end
 
-		student =Student.new()
-		student.occupation("Jill","Student")
-		teacher =Teacher.new()
-		teacher.occupation("Sam","Teacher")
-		employee = Employee.new()
-		employee.occupation("Bob","Employee")
+		end
+ 		
+ 			s=Student.new("Student")
+ 			puts s.occupation
+ 			t=Teacher.new("I am a Teacher")
+ 			puts t.occupation
+ 			e=Employee.new("I am an Employee")
+ 			puts e.occupation
